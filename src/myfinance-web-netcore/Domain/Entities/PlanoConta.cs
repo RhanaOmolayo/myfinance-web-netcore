@@ -1,10 +1,14 @@
-namespace myfinance_web_dotnet.Domain.Entities
-{
-  public class PlanoConta
-  {
-    public int? Id { get; set; }
-    public string Descricao { get; set; }
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-    public string Tipo { get; set; }
-  }
+namespace myfinance_web_netcore.Domain.Entities
+{
+    public class PlanoConta
+    {
+        public int? Id { get; set; }
+        public string Descricao { get; set; }
+        public string Tipo { get; set; }
+    }
 }

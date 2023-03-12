@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using myfinance_web_dotnet.Models;
+using myfinance_web_netcore.Models;
 
-namespace myfinance_web_dotnet.Controllers;
+namespace myfinance_web_netcore.Controllers;
 
 public class HomeController : Controller
 {
@@ -23,5 +23,9 @@ public class HomeController : Controller
         return View();
     }
 
-   
+    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+    public IActionResult Error()
+    {
+        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+    }
 }
